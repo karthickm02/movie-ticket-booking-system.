@@ -1,0 +1,29 @@
+<div class="main-container">
+    <div class="movie-container">
+        {{movie.title}}
+        <div class="movie-detail">
+            {{movie.lang}} &nbsp;&nbsp;&nbsp;&nbsp; 
+        </div>
+    </div>
+    <div class="date-container">
+        <div *ngFor="let scedule of premiereDate; index as i" (click)="dateActivation(i)" >
+            <div class={{scedule.dateActive}}>
+                
+                <div  class="day ">
+                    {{scedule.date | date:"dd"}}
+                </div>
+                <div class="day-txt">
+                     {{scedule.date | date:"EEE"}}
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    
+    <router-outlet></router-outlet>
+
+   
+       
+
+</div>

@@ -1,0 +1,18 @@
+<div class="title-container">
+  <h2  >Movies</h2>
+</div>
+<div class="movies-container">
+  <div class="container">
+    <div class="row">
+      <div *ngFor="let movie of movieList"> 
+          <div class="col-sm">
+            <a routerLink="/movie-details/{{movie.id}}">
+              <img src="assets/movies list/{{movie.src}}.jpg" class="rounded float-left movie-img" alt="...">
+            </a>
+              <h4 class="movie-title">{{movie.title}}</h4>
+              <h6 class="movie-lang" >{{movie.lang}}</h6>
+          </div>  
+        </div> 
+    </div>
+  </div>
+</div>

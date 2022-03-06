@@ -1,0 +1,196 @@
+.movie-container {
+    font-size: 35px;
+    width: auto;
+    height: 120px;
+    color: white;
+    padding-top: 40px;
+    padding-left: 20px;
+    background-color: #333545;
+}
+
+.movie-detail {
+    font-size: 15px;
+}
+
+.date-container {
+    padding-left: 50px;
+    display: flex;
+    flex-direction: row;
+    width:  auto;
+    height: 60px;
+    border-bottom: 1px solid #e6e0e0;
+    background-color: white;
+}
+
+.date {
+    width: 55px;
+    cursor: pointer;
+    height: 45px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    margin:7px 10px;
+    font-size: small;
+    color: black;
+    opacity: 0.6;   
+}
+
+.date-active {
+    cursor: pointer;
+    width: 55px;
+    height: 45px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    margin:7px 10px;
+    font-size: small;
+    background-color: #F84464;
+    color: white;
+}
+
+.day, .day-txt {
+    display: flex;
+    justify-content: center;
+    font-weight: 500;    
+} 
+
+.day {
+    padding-top: 2px;
+    height: 20px;
+    font-size: 18px;
+    font-weight: 500;    
+}
+
+.day-txt {
+    padding-top: 3px;
+    height: 15px;
+    font-size: 15px;
+    
+}
+
+.main-container {
+    background-color: #F2F2F2;
+}
+
+.theatre-container {
+    margin: 15px 15px;
+    background-color: white;
+}
+
+.theatre {
+    display: flex;
+    flex-direction: row;
+    padding: 13px 20px;
+    width: auto;
+    height: 90px;
+    border-bottom: 1px solid #e6e0e0;
+    
+}
+
+.note-container {
+    padding-top: 6px;
+    font-size: small;
+    display: flex;
+    justify-content: right;
+    width: auto;
+    height: 30px;
+    border-bottom: 1px solid #e6e0e0;
+    
+}
+
+.note {
+    padding-top: 3px;
+    width: 80px;
+    height: 17px;
+}
+
+.note-container span {
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.heart-icon {
+    height: 100%;
+    opacity: 0.5;
+    padding-right: 10px;
+}
+
+.theatre-detail {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.theatre-name {
+    font-size: 15px;
+    font-weight: bold;
+    padding-bottom: 10px;
+
+}
+.theatre-sub {
+    display: flex;
+    flex-direction: row;  
+}
+
+.M-ticket, .fooo-bev {
+    width: 40%;
+    font-size: 13px;
+}
+
+.M-ticket {
+    color: #56a567;
+}
+
+.M-ticket i, .fooo-bev i  {
+opacity: 0.5;
+}
+
+.fooo-bev {
+    color: #FCB240;
+}
+
+.btn-showtime {
+    width: 100px;
+    height: 40px;
+    font-size: 13px;
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid #e6e0e0;
+    color: #56a567;
+    outline: none;
+}
+
+.showtimes {
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.show {
+    padding-left: 20px;
+}
+
+.btn-cancel, .btn-accept {
+    width: 50%;
+    height: 40px;   
+    border: 2px solid #F84464;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 400;
+    outline: none;
+}
+
+.btn-cancel {
+    background-color: white;
+    color: #F84464;
+}
+
+.btn-accept {
+    background-color: #F84464;
+    color: white;
+}
+
+
+
+

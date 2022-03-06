@@ -1,0 +1,63 @@
+<div class="main-container">
+  <div class="seat-block">
+    <div class="ticket-rate">
+      200 Rs
+    </div>
+    <div class="theatre-block">
+      <table>
+        <tbody>
+          <tr class="tr" *ngFor="let item of seatRow | keyvalue">
+            <th class="th">{{item.key}}</th>
+            <td *ngFor="let seat of item.value; index as i" (click)="seatSelection(i, item.key)">
+              <div class="box">
+
+                <i class="fal fa-loveseat select-icon" *ngIf="!seat.state"></i>
+                <i class="fas fa-loveseat select-icon" *ngIf="seat.state"></i>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="ticket-block">
+    <div class="ticket">
+      <div class="theatre-name">
+        <h6>Theatre</h6>
+        {{theatre.name}}
+      </div>
+      <div class="showtime">
+        <h6>Show time</h6>
+        {{showTime}}
+      </div>
+      <div class="seat-container">
+        <div class="container">
+          <div class="row">
+            <div *ngFor="let seat of selectedSeats| keyvalue">
+              <div *ngIf="seat.value.state">
+                <div class="col-sm seats">
+                  {{seat.value.seat}}
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="payment-container">
+        <div class="seat-payment">
+          <div class="seat-count">
+            {{selectedSeats.size}} Seat(s)
+          </div>
+          <div class="amount-total">
+            {{total}} &#8377;
+          </div>
+        </div>
+        <div class="payment">
+          Pay RS.{{total}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

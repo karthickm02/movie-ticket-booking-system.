@@ -1,0 +1,53 @@
+<div class="main-body">
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+
+    </ol>
+    <div class="carousel-inner">
+      <ng-container *ngFor="let slider of sliderItems">
+        <div class={{slider.class}}>
+          <img class="d-block w-100" src={{slider.src}}>
+        </div>
+      </ng-container>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  <img src="assets/lead-in-v3-collection-202102040828.png" class="img-fluid " alt="Responsive image">
+
+  <div class="movies-container">
+
+
+    <img class="premiere-img" src="assets/premiere-rupay-banner-web-collection-202104230555.png">
+
+    <div class="container">
+      <h1 style="color: white;">Top Movies</h1>
+      <div class="row">
+        <div *ngFor="let movie of movieList">
+          <div *ngIf=movie.isTopMovie>
+            <div class="col-sm">
+              <a routerLink="/movie-details/{{movie.id}}">
+                <img src="assets/movies list/{{movie.src}}.jpg" class="rounded float-left imag" alt="...">
+              </a>
+              <h4 class="movie-title">{{movie.title}}</h4>
+              <h6 class="movie-lang">{{movie.lang}}</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>

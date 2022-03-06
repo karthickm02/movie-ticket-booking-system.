@@ -1,0 +1,51 @@
+[
+    {
+        "id": 0,
+        "name": "KS Cineplex:Chennai",
+        "row": 10,
+        "column": 16,
+        "showTimes" : "showTimes"
+      },
+      {
+        "id": 1,
+        "name": "PVR:VR Chennai,Anna nagar",
+        "row": 6,
+        "column": 10,
+        "showTimes" : ["9:30 AM", "2:30 PM", "6:30 PM", "10:30 PM"]
+      },
+      {
+        "id": 2,
+        "name": "AGS Cinemas OMR:Navlur",
+        "row": 14,
+        "column": 16,
+        "showTimes" : ["9:30 AM", "2:30 PM", "6:30 PM", "10:30 PM"]
+      },
+      {
+        "id": 3,
+        "name": "AGS Cinemas:Villivakam",
+        "row": 8,
+        "column": 10,
+        "showTimes" : ["9:30 AM", "2:30 PM", "6:30 PM", "10:30 PM"]
+      },
+      {
+        "id": 4,
+        "name": "INOX:The Marina Mall,OMR",
+        "row": 6,
+        "column": 16,
+        "showTimes" : ["9:30 AM", "2:30 PM", "6:30 PM", "10:30 PM"]
+      },
+      {
+        "id": 5,
+        "name": "Rohini Silver Screen:Koyambedu",
+        "row": 12,
+        "column": 10,
+        "showTimes" : ["9:30 AM", "2:30 PM", "6:30 PM", "10:30 PM"]
+      },
+      {
+        "id": 6,
+        "name": "EVP Cinemas:Chenni",
+        "row": 10,
+        "column": 10,
+        "showTimes" : ["9:30 AM", "2:30 PM", "6:30 PM", "10:30 PM"]
+      }
+]

@@ -1,0 +1,75 @@
+.movie-container {
+  position: relative;
+}
+
+.topleft {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  top: 40px;
+  left: 60px;
+  font-size: 18px;
+}
+
+.topleft img {
+  width: 250px;
+  height: 350px;
+  border-radius: 15px;
+}
+
+.cover-img {
+  width: 100%;
+  height: auto;
+  filter: brightness(40%);
+  background-color: black;
+}
+
+.movie-details {
+  padding-left: 50px;
+  color: white;
+}
+
+.movie-title {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.movie-lang {
+  font-size: 20px;
+}
+
+.two-D {
+  margin-top: 20px;
+  background-color: white;
+  color: black;
+  width: 30px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.btn-book {
+  cursor: pointer;
+  outline: none;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  margin-top: 20px;
+  border: none;
+  color: white;
+  background-color: #f24d64;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.run-time {
+  margin-top: 20px;
+}
+
+.about-movie {
+  color: black;
+  padding: 50px 30px;
+}
+
+.about-movie h4 {
+  font-weight: bolder;
+}

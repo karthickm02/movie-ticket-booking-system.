@@ -1,0 +1,82 @@
+[
+    {
+        "id": 0,
+        "src": "anotherround",
+        "isTopMovie": false,
+        "title": "Another Round",
+        "lang": "Danish | UA",
+        "theatres": [1, 2, 3, 5 ,6]
+      }, 
+      {
+        "id": 1,
+        "src": "GGVV",
+        "isTopMovie": true,
+        "title": "Kannada | A",
+        "lang": "Danish | UA",
+        "theatres": [0, 1, 2, 3, 5 ]
+      },
+      {
+        "id": 2,
+        "src": "kadaisivivasayi",
+        "isTopMovie": true,
+        "title": "Kadaisi Vivasayi",
+        "lang": "Tamil | U",
+        "theatres": [0, 1, 3, 5 ]
+      },
+      {
+        "id": 3,
+        "src": "licoricepizza",
+        "isTopMovie": false,
+        "title": "Licorice Pizza",
+        "lang": "English | UA",
+        "theatres": [5, 6 ]
+      },
+      {
+        "id": 4,
+        "src": "parasite",
+        "isTopMovie": false,
+        "title": "Parasite",
+        "lang": "Korean | U",
+        "theatres": [0, 1, 2, 3, 4]  
+      },
+      {
+        "id": 5,
+        "src": "thebatman",
+        "isTopMovie": true,
+        "title": "The Batman",
+        "lang": "English | A",
+        "theatres": [3, 5 ]
+      },
+      {
+        "id": 6,
+        "src": "theirishman",
+        "isTopMovie": false,
+        "title": "The Irish Man",
+        "lang": "English | A",
+        "theatres": [2, 3, 4, 5]
+      },
+      {
+        "id" : 7,
+        "src": "thepowerofdog",
+        "isTopMovie": false,
+        "title": "The Power of the dog",
+        "lang": "English | UA",
+        "theatres": [0, 2, 3]
+      },
+      {
+        "id": 8,
+        "src": "theworstpersonintheworld",
+        "isTopMovie": false,
+        "title": "The Worst person in the world | A",
+        "lang": "Norwegian | A",
+        "theatres": [3]
+      },
+      {
+        "id": 9,
+        "src": "westsidestory",
+        "isTopMovie": true,
+        "title": "West Side Story",
+        "lang": "English | U",
+        "theatres": [3]
+      }
+]

@@ -1,0 +1,27 @@
+<div class="movie-container">
+    <img class="cover-img" src="assets/movies list/backround pics/{{movie.src}}.jpg" alt="Cinque Terre">
+    <div class="topleft">
+        <div>
+            <img src="assets/movies list/{{movie.src}}.jpg" alt="">
+        </div>
+        <div class="movie-details">
+            <div class="movie-title">{{movie.title}}</div>
+            <div class="movie-lang">{{movie.lang}}</div>
+            <div class="two-D">2D</div>
+            <div class="run-time">2h 36m | Action, Thriller
+            </div>
+            <div></div>
+            <div>
+                <a routerLink="/theater-selection/{{movie.id}}">
+                    <button class="btn-book">Book Tickets</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="about-movie">
+    <h4>About the Movie</h4>
+    <p>Irfan, an innocent man with an ordinary life, is portrayed as the evil incarnated by media trials. Is there a
+        journey back to normal life for a man accused of terrorism? Is there more to Irfan than what meets the eye?</p>
+</div>

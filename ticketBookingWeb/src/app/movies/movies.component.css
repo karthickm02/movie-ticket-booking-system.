@@ -1,0 +1,55 @@
+.carousel-img {
+    width: 1206px;
+    height: 277px;
+}
+
+.movie-img {
+    width: 250px;
+    height: 350px;
+    padding-bottom: 10px;
+}
+
+.movie-img:hover {
+    transform: scale(1.05);
+}
+
+.movies-container {
+    margin: 10px 25px;
+    background-color: #2B3149;
+    border-radius: 5px;
+}
+
+.container {
+    padding-top: none;
+}
+.title-container {
+    background-color: #2B3149;
+    border-radius: 5px;
+    margin: 10px 25px;
+    color: white;
+    text-align: center;
+}
+
+.img-fluid {
+    margin-top: 40px;
+    width: 95%;
+    padding-left: 5%;
+}
+
+.movie-title, .movie-lang {
+    font-weight: bolder;
+    color: white;
+    padding-bottom: 10px;
+    font-size: 15px;
+    width: 250px;
+}
+
+.movie-lang {
+    font-weight: 500;
+    color: rgb(163, 161, 153);
+}
+
+.container {
+    padding-top: 60px;
+}
+

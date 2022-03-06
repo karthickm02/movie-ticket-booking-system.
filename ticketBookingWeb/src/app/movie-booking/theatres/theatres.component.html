@@ -1,0 +1,30 @@
+<div class="theatre-container">
+    <div class="note-container">
+        <span class="badge badge-success note">Available</span>
+        <span class="badge badge-danger note">Fast Filling</span>
+    </div>
+    <div >   
+    <div  *ngFor="let theatre of theatres; index as i">
+        <div class="theatre">
+            <div class="heart-icon">
+                <i class="fal fa-heart"></i>
+            </div>
+            <div class="theatre-detail">
+                <div  class="theatre-name">{{theatre.name}} {{theatre.id}} </div>
+                <div class="theatre-sub">
+                    <div class="M-ticket"><i class="fal fa-mobile-android"></i>&nbsp; M-Ticket</div>
+                    <div class="fooo-bev"><i class="fal fa-burger-soda"></i>&nbsp; Food & Beverage</div>
+                </div>
+            </div>
+            <div class="showtimes">
+                <div *ngFor="let shows of theatre.showTimes; index as i" >
+                    <div class="show">
+                        <button (click)="showSeats(theatre.id, i)" class="btn-showtime">{{shows}}</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
