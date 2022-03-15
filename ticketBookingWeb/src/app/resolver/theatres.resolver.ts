@@ -4,17 +4,24 @@ import {
   RouterStateSnapshot,
   ActivatedRouteSnapshot
 } from '@angular/router';
-import { Observable, of } from 'rxjs';
+import { Store } from '@ngrx/store';
+import { map, Observable, of } from 'rxjs';
+import { theatres } from '../movies-state/movies.action';
 import { theatre } from '../moviesDB';
 import { TicketBookingService } from '../service/ticket-booking.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class TheatresResolver implements Resolve<theatre[]> {
-  constructor (private ticketBooking : TicketBookingService ) {}
+export class TheatresResolver implements Resolve<any> {
+  constructor (private ticketBooking : TicketBookingService, private store: Store<any> ) {}
 
-  resolve(): Observable<theatre[]>{
-    return this.ticketBooking.getTheatres();
+  resolve(): any{
+    return this.ticketBooking.getTheatres(). pipe(
+      map((result: theatre[]) => {
+        this.store.dispatch(theatres({theatresList:result}));
+      })
+    );
   }
 }
+ 

@@ -4,7 +4,7 @@
         "name": "KS Cineplex:Chennai",
         "row": 10,
         "column": 16,
-        "showTimes" : "showTimes"
+        "showTimes" : ["9:30 AM", "2:30 PM", "6:30 PM", "10:30 PM"]
       },
       {
         "id": 1,

@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { getTheatres } from 'src/app/movies-state/movies.selector';
 import { theatre } from 'src/app/moviesDB';
 
 @Component({
@@ -8,7 +10,7 @@ import { theatre } from 'src/app/moviesDB';
   styleUrls: ['./seat-selection.component.css'],
 })
 export class SeatSelectionComponent implements OnInit {
-  public theatre: theatre;
+  public theatre!: theatre;
   public seatRow = new Map();
   public selectedSeats = new Map();
   public total: number = 0.0;
@@ -16,10 +18,12 @@ export class SeatSelectionComponent implements OnInit {
   seatRowNames: string[] = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N',
               'O','P','Q','R','S','T','U','V','W','X','Y','Z'];
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute, private store:Store<any>) {
     var theatreId = parseInt(this.route.snapshot.params['theatreId']);
+    this.store.select(getTheatres).subscribe ( data => {
+      this.theatre = data[theatreId]!;
+    })
     var showTimeIndex = parseInt(this.route.snapshot.params['showTimeIndex']);
-    this.theatre = this.route.snapshot.data['theatres'][theatreId]!;
     this.showTime = this.theatre.showTimes[showTimeIndex];
   }
 

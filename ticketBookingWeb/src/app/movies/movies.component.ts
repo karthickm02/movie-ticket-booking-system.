@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { getMovies } from '../movies-state/movies.selector';
 import { movie } from '../moviesDB';
 
 @Component({
@@ -10,9 +12,11 @@ import { movie } from '../moviesDB';
 export class MoviesComponent implements OnInit {
   public movieList: movie[] = [];
   
-  constructor(private route:ActivatedRoute) {}
+  constructor(private route:ActivatedRoute, private store:Store<any>) {}
 
   ngOnInit(): void {
-    this.movieList = this.route.snapshot.data["movies"];
+    this.store.select(getMovies).subscribe(data => {
+      this.movieList = data;
+    })
   }
 }

@@ -3,13 +3,16 @@ import { CommonModule } from '@angular/common';
 
 import { TheatresRoutingModule } from './theatres-routing.module';
 import { TheatresComponent } from './theatres.component';
+import { theatreReducer } from 'src/app/movies-state/movies.reducer';
+import { StoreModule } from '@ngrx/store';
 
 
 @NgModule({
   declarations: [TheatresComponent],
   imports: [
     CommonModule,
-    TheatresRoutingModule
+    TheatresRoutingModule,
+    StoreModule.forFeature("theatres", theatreReducer),
   ]
 })
 export class TheatresModule { }

@@ -1,28 +1,32 @@
 import { Injectable } from '@angular/core';
 import {
-  Router, Resolve,
+  Router,
+  Resolve,
   RouterStateSnapshot,
-  ActivatedRouteSnapshot
+  ActivatedRouteSnapshot,
 } from '@angular/router';
-import { Observable, of } from 'rxjs';
+import { Store } from '@ngrx/store';
+import { map, Observable, of } from 'rxjs';
+import { movies } from '../movies-state/movies.action';
 import { movie, theatre } from '../moviesDB';
 import { TicketBookingService } from '../service/ticket-booking.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-export class MoviesResolver implements Resolve<movie[]> {
-
+export class MoviesResolver implements Resolve<any> {
   public movies: movie[] = [];
-  constructor (private ticketBooking : TicketBookingService ) {}
+  constructor(
+    private ticketBooking: TicketBookingService,
+    private store: Store<any>
+  ) {}
 
-  resolve(): Observable<movie[]> {
-    // var movies;
+  resolve() {
 
-
-    return this.ticketBooking.getMovies();
-
+    return this.ticketBooking.getMovies(). pipe(
+      map((result: movie[]) => {
+        this.store.dispatch(movies({moviesList:result}));
+      })
+    );
   }
 }
-
-

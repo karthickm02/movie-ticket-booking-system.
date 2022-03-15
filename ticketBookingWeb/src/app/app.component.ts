@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Store } from '@ngrx/store';
+import {  } from './movies-state/movies.action';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  
+  constructor (private store:Store<any>) {
+  }
   title = 'ticketBookingWeb';
+  ngOnInit(): void {
+  }
+  
 }

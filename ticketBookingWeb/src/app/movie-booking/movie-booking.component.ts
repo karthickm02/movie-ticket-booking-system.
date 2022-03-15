@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { getMovies } from '../movies-state/movies.selector';
 import { movie } from '../moviesDB';
 
 @Component({
@@ -8,8 +10,7 @@ import { movie } from '../moviesDB';
   styleUrls: ['./movie-booking.component.css'],
 })
 export class MovieBookingComponent implements OnInit {
-  public movieId: number;
-  public movie: movie;
+  public movie!: movie;
   public premiereDate: {date:Date, dateActive:string}[] = [];
 
   setPremiereDate() {
@@ -31,10 +32,11 @@ export class MovieBookingComponent implements OnInit {
     }
   }
 
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute,  private store:Store<any>) {
     var temp = parseInt(this.route.snapshot.params['id']);
-    this.movie = this.route.snapshot.data['movies'][temp];
-    this.movieId = this.movie.id;
+    this.store.select(getMovies).subscribe(data => {
+      this.movie = data[temp];
+    })
     this.setPremiereDate();
   }
 
